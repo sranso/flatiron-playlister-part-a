@@ -61,8 +61,9 @@ describe "playlister" do
   it '10 artists have genres' do
     artist = Artist.new
     song = Song.new
-
-    song.genre = Genre.new.tap{|g| g.name = "rap"}
+    genre = Genre.new
+    genre.name = "rap"
+    song.genre=(genre)
     artist.add_song(song)
 
     artist.genres.should include(song.genre)

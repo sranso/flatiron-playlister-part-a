@@ -103,6 +103,8 @@ describe "playlister" do
 
     genre.artists.count.should eq(2)
   end
+  #whenever an artist 'receives' a song, the song's
+  #genre should be added to that artists' genre array
 
   it '15 A genres Artists are unique' do
     genre = Genre.new.tap{|g| g.name = 'rap'}

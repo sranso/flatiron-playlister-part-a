@@ -133,18 +133,27 @@ describe "playlister" do
   # Complete any song test that is pending (undefined).
 
   it '17 Can initialize a song' do
-
+    expect(Song.new).to_not raise_error
   end
 
-  it '18 A song can have a name' do
-
+  it '18 A song can have a name aka title' do
+    newsong = Song.new
+    newsong.title="Sarah's Favorite Song"
+    expect(newsong.title).to eq("Sarah's Favorite Song")
   end
 
   it '19 A song can have a genre' do
-
+    newsong = Song.new
+    newgenre = Genre.new
+    newsong.genre=(newgenre)
+    expect(newsong.genre).to eq(newgenre)
   end
 
   it '20 A song has an artist' do
-
+    newsong = Song.new
+    newgenre = Genre.new
+    newartist = Artist.new
+    newsong.artist=(newartist)
+    expect(newsong.artist).to eq(newartist)
   end
 end

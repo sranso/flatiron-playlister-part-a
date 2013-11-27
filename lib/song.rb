@@ -1,9 +1,9 @@
 class Song
-
+  attr_accessor :title, :artist
   attr_reader :genre
 
   def initialize
-    @title = ""
+    @title
     @genre
     @artist
   end
@@ -11,11 +11,7 @@ class Song
   def genre=(genre_obj)
     @genre = genre_obj
     genre_obj.songs << self unless genre_obj.songs.include? self
-    # Genre.new.tap{|g| g.name = "rap"}
-  end
-
-  def artist
-    @artist
   end
 
 end
+

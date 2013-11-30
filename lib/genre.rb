@@ -4,7 +4,7 @@ class Genre
   # attr_reader :songs
   GENRES = []
 
-  def initialize
+  def initialize(name)
     @name = name
     @songs = []
     @artists = []
@@ -12,7 +12,7 @@ class Genre
   end
 
   def songs
-    @songs #just the array
+    @songs
   end
 
   def artists

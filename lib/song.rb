@@ -2,10 +2,10 @@ class Song
   attr_accessor :title, :artist
   attr_reader :genre
 
-  def initialize(title)
+  def initialize(title, artist)
     @title = title
     @genre
-    @artist
+    @artist = artist
   end
 
   def genre=(genre_obj)

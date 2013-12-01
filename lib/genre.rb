@@ -5,7 +5,7 @@ class Genre
   GENRES = []
 
   def initialize(name)
-    @name = name
+    @name = name.capitalize
     @songs = []
     @artists = []
     GENRES << self
